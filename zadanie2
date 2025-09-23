@@ -1,0 +1,14 @@
+# Ввод символа от пользователя
+symbol = input("Введите любой символ: ")
+
+# Получаем порядковый номер (код ASCII) символа
+ascii_code = ord(symbol[0])  # берем первый символ, если введено больше одного
+
+# Находим предыдущий и последующий символы
+previous_symbol = chr(ascii_code - 1)
+next_symbol = chr(ascii_code + 1)
+
+# Выводим результаты
+print(f"Порядковый номер символа '{symbol}' в таблице ASCII: {ascii_code}")
+print(f"Предыдущий символ: '{previous_symbol}'")
+print(f"Последующий символ: '{next_symbol}'")
