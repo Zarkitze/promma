@@ -1,0 +1,20 @@
+import math
+
+# Введите значения переменных
+x = float(input("Введите x: "))
+y = float(input("Введите y: "))
+z = float(input("Введите z: "))
+a = float(input("Введите a: "))
+b = float(input("Введите b: "))
+c = float(input("Введите c: "))
+d = float(input("Введите d: "))
+f = float(input("Введите f: "))
+
+# Вычисления по формуле
+part1 = (math.cos(x) ** 2) / math.sin(x)
+part2 = x * y * z
+part3 = (a * x ** 2 + b * x + c) / (d * x ** 3 - f)
+
+result = part1 - part2 + part3
+
+print("Результат:", result)
