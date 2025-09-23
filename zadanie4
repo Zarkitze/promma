@@ -1,0 +1,26 @@
+import math
+def is_in_region(x, y):
+    # Проверка принадлежности точки кругу радиуса 3
+    in_circle = x ** 2 + y ** 2 <= 9
+
+    # Для правой части (x >= 0)
+    if x >= 0:
+        return in_circle
+
+    # Для левой части (x < 0)
+    else:
+        # Проверка, что точка ниже верхней прямой (y <= x + 3)
+        below_upper_line = y <= x + 3
+        # Проверка, что точка выше нижней прямой (y >= -x - 3)
+        above_lower_line = y >= -x - 3
+        # Точка должна быть между прямыми
+        return below_upper_line and above_lower_line
+
+
+# Ввод координат точки
+x = float(input("Введите координату x: "))
+y = float(input("Введите координату y: "))
+
+# Проверяем и выводим результат
+result = is_in_region(x, y)
+print(result)
